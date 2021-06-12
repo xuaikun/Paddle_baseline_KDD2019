@@ -18,6 +18,9 @@ python preprocess_dense.py # change for different feature strategy
 python pre_test_dense.py
 #cd out
 split -a 2 -d -l 200000 normed_train.txt normed_train
+# 针对以上语句的实现有两种方案：
+1. Linux: 直接在Linux中使用
+2. windows: （1）安装Git,使用Git Bash打开out文件夹，使用git自带的split功能，即可实现
 ```
 preprocess.py and preprocess_dense.py is the code for preprocessing the raw data. Two versions are provided to deal with all sparse features and sparse plus dense features. Correspondingly, pre_process_test.py and pre_test_dense.py are the codes to preproccess test raw data. The training instances are saved in json. It is very easy to add new features. In our demo, all features are generated from provided raw data except for weather feature, which is gengerated from open weather records.
 Note that the feature generated in this step need to fit in the input of the model input. Make sure we use the right version. In demo codes, The sparse plus dense features are used for network_confv6. 
