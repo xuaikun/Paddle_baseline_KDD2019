@@ -1,5 +1,28 @@
 # 注意：这份代码线下我没跑出结果，但在百度的[AIstudio](https://aistudio.baidu.com/aistudio/index?_=1578238404289)上跑出结果了，我也不知道什么回事，大家勿踩坑！
 
+## 个人经验：
+1. 相同数据，本地和在线Aistudio同样跑以下几个脚本
+```python
+python preprocess_dense.py # change for different feature strategy
+python pre_test_dense.py
+#cd out
+split -a 2 -d -l 200000 normed_train.txt normed_train
+# 针对以上语句的实现有两种方案：
+1. Linux: 直接在Linux中使用
+2. windows: （1）安装Git,使用Git Bash打开out文件夹，使用git自带的split功能，即可实现
+```
+2. 紧接着，在线Aistudio跑local_train_py3.py训练模型，得到：epoch{1-10}.model
+```python
+python local_train_py3.py
+```
+3. 将以上epoch{1-10}.model下载放到本地
+4. 在本地运行：
+```python
+python generate_test_py3.py
+python build_submit_py3.py
+```
+5. 运行自定义的Metric.py用于评估：F1,Pre,Rec,NDCG等指标
+
 # Paddle_baseline_KDD2019
 ## More Information Go To https://github.com/PaddlePaddle/models/tree/develop/PaddleRec/ctr/Paddle_baseline_KDD2019
 Paddle baseline for KDD2019 "Context-Aware Multi-Modal Transportation Recommendation"(https://dianshi.baidu.com/competition/29/question)
