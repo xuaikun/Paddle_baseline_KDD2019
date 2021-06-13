@@ -1,4 +1,4 @@
-# 注意：这份代码线下我没跑出结果，但在百度的[Aistudo](https://aistudio.baidu.com/aistudio/index?_=1578238404289)上跑出结果了，我也不知道什么回事，大家勿踩坑！
+# 注意：这份代码线下我没跑出结果，但在百度的[AIstudio](https://aistudio.baidu.com/aistudio/index?_=1578238404289)上跑出结果了，我也不知道什么回事，大家勿踩坑！
 
 # Paddle_baseline_KDD2019
 ## More Information Go To https://github.com/PaddlePaddle/models/tree/develop/PaddleRec/ctr/Paddle_baseline_KDD2019
