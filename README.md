@@ -1,6 +1,7 @@
 # 注意：这份代码线下我没跑出结果，但在百度的[AIstudio](https://aistudio.baidu.com/aistudio/index?_=1578238404289)上跑出结果了，我也不知道什么回事，大家勿踩坑！
 
 ## 个人经验：
+### 数据拆分：可使用MTRes_DLT中的代码，已经写好，可直接用！
 1. 相同数据，本地和在线Aistudio同样跑以下几个脚本
 ```python
 python preprocess_dense.py # change for different feature strategy
